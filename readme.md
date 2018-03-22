@@ -9,4 +9,5 @@ I am working on this to easily be able to get started with a containerized stack
 
 ### Commands:
 start: `docker-compose up`: Starts webserver running on port 80
+
 stop: `docker-compose down`: Brings down the containers
