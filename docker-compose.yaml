@@ -1,0 +1,11 @@
+version: '2'
+services:
+  fullstack-nginx:
+    build:
+      context: ./.docker/nginx
+    container_name: fullstack-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./client/dist:/usr/share/nginx/html
