@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-      <div>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-      </div>
+    <nav class="navbar is-fixed-top is-primary">
+      <a href="#/" class="navbar-item"><strong>FullStack</strong></a>
+      <a href="#/about" class="navbar-item">About</a>
+    </nav>
     <router-view/>
   </div>
 </template>
@@ -15,12 +15,7 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    body {
+        margin-top: 60px;
+    }
 </style>
