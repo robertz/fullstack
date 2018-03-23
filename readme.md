@@ -11,3 +11,8 @@ I am working on this to easily be able to get started with a containerized stack
 start: `docker-compose up`: Starts webserver running on port 80
 
 stop: `docker-compose down`: Brings down the containers
+
+### Webpack dev server:
+start: `docker-compose -f docker-compose.dev.yaml up --build`: Start webpack dev server
+
+stop: `docker-compose -f docker-compose.dev.yaml down`: Brings down the development containers

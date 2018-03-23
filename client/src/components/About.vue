@@ -9,7 +9,7 @@ export default {
   name: 'About',
   data() {
     return {
-      msg: 'Welcome to Your About Page',
+      msg: 'Is my hotload working?',
     };
   },
 };

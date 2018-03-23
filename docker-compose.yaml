@@ -2,7 +2,7 @@ version: '2'
 services:
   fullstack-nginx:
     build:
-      context: ./.docker/nginx
+      context: ./.docker/prod/nginx
     container_name: fullstack-nginx
     links:
       - fullstack-node
@@ -13,7 +13,7 @@ services:
       - ./client/dist:/usr/share/nginx/html
   fullstack-node:
     build:
-      context: ./.docker/node
+      context: ./.docker/prod/node
     container_name: fullstack-node
     environment:
       - NODE_ENV=production
@@ -24,4 +24,4 @@ services:
     ports:
       - "3000:3000"
     command: "yarn start"
-    
+
