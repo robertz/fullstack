@@ -7,12 +7,13 @@ I am working on this to easily be able to get started with a containerized stack
 - VueJS  
 - Node v6
 
-### Commands:
-start: `docker-compose up`: Starts webserver running on port 80
+## Development Mode
+Start in development mode with `docker-compose -f docker-compose.dev.yaml up --build` create three containers. First we will
+start nginx to proxy requests. A container running `webpack-dev-server` will handle default requests. Finally, a container 
+running NodeJS and Express will handle requests to `/api`.
 
-stop: `docker-compose down`: Brings down the containers
 
-### Webpack dev server:
-start: `docker-compose -f docker-compose.dev.yaml up --build`: Start webpack dev server
-
-stop: `docker-compose -f docker-compose.dev.yaml down`: Brings down the development containers
+## Production Mode
+Start in "production" mode with `docker-compose up --build` create three containers. First we will
+start nginx to proxy requests. A container will bundle the static site by calling `yarn build`. Finally, a container 
+running NodeJS and Express will handle requests to `/api`.

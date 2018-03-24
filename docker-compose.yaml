@@ -11,6 +11,14 @@ services:
       - "443:443"
     volumes:
       - ./client/dist:/usr/share/nginx/html
+  fullstack-webpack:
+    build:
+      context: ./.docker/prod/webpack
+    container_name: fullstack-webpack
+    volumes:
+      - ./client:/app
+      - ./client/node_modules:/app/node_modules
+    command: "yarn build"
   fullstack-node:
     build:
       context: ./.docker/prod/node
