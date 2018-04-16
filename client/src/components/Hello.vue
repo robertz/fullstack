@@ -1,7 +1,13 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1>{{ msg }}</h1>
+      <h3 class="title is-3">Fullstack Demo</h3>
+
+      <p>
+        The project is comprised of Nginx to forward requests, the HTML is either servered from
+        Webpack or generated HTML and finally Express is used to handle API requests.
+      </p>
+
     </div>
   </section>
 </template>
@@ -11,7 +17,7 @@ export default {
   name: 'Hello',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+
     };
   },
 };
