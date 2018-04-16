@@ -9,7 +9,7 @@ export default {
   name: 'About',
   data() {
     return {
-      msg: 'Is this thing on?',
+      msg: 'This is Your About Page',
     };
   },
 };
