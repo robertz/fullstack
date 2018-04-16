@@ -20,6 +20,13 @@ app.get(`/api/users`, (req, res, next) => {
       });
 });
 
+app.get(`/api/users/:id`, (req, res, next) => {
+  return axios.get(`https://jsonplaceholder.typicode.com/users/${req.params.id}`)
+    .then((response) => {
+      res.json(response.data);
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`App started and listening on port ${PORT}`)
 });

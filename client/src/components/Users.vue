@@ -16,7 +16,7 @@
         <tbody>
           <tr v-for="user in users" :key="user.id">
             <td>{{ user.id }}</td>
-            <td>{{ user.name }}</td>
+            <td><a v-bind:href="'/user-detail/' + user.id">{{ user.name }}</a></td>
             <td>{{ user.username }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.phone }}</td>
